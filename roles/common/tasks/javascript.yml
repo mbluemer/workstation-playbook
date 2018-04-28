@@ -1,0 +1,19 @@
+---
+- name: install node
+  package:
+    name: node
+    state: present
+
+- name: install nvm
+  shell: curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+    - warn=false
+
+- name: Get vars for yarn install
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}.yml"
+    - default.yml
+
+- name: install yarn
+  shell: "{{ yarn_install_command }}"
+    - warn=false
