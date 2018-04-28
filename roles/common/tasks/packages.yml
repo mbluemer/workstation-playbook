@@ -28,3 +28,4 @@
   package:
     name: keepassx
     state: present
+    use: "{{ pkg_mgr_override }}"

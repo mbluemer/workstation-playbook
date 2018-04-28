@@ -1,2 +1,9 @@
 ---
-  - include: javascript.yml
+- name: Get distribution vars
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}.yml"
+    - default.yml
+
+- include: packages.yml
+- include: javascript.yml
