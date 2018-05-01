@@ -1,9 +1,4 @@
 ---
-- name: install fish shell
-  package:
-    name: fish
-    state: present
-
 - name: install tmux
   package:
     name: tmux

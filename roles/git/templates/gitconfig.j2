@@ -1,0 +1,24 @@
+[user]
+    name = {{ full_name }}
+    email = {{ git_email }}
+
+{% if ansible_os_family == 'Darwin' %}
+[credential]
+        helper = osxkeychain
+{% endif %}
+
+[alias]
+    a = add
+    s = status
+    co = checkout
+    amend = commit --amend
+    please = push --force-with-lease
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = true
+[core]
+    excludesfile = ~/.gitignore_global
+    editor = vim

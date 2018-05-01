@@ -1,0 +1,10 @@
+- name: install zsh shell
+  package:
+    name: fish
+    state: present
+
+- name: change default shell to zsh
+  shell: chsh -s /usr/local/bin/zsh "{{ ansible_user_id }}"
+  become: yes
+  args:
+    warn: false

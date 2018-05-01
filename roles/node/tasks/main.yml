@@ -1,4 +1,9 @@
 ---
+- name: Get distribution vars
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}.yml"
+
 - name: install node
   package:
     name: node
