@@ -1,1 +1,1 @@
-ansible-playbook -i HOSTS setup.yml -K
+ansible-playbook -i HOSTS setup.yml -K -vvv

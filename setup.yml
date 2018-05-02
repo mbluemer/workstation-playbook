@@ -2,9 +2,10 @@
 - hosts: all
   connection: local
 
-  vars_files:
-    - main.yml
   roles:
+    - dotfiles
     - git
     - zsh
+    - tmux
     - node
+    - packages

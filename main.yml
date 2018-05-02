@@ -1,7 +1,0 @@
----
-dotfiles_user_home: "{{ '~' | expanduser }}"
-dotfiles_home: "{{dotfiles_user_home}}/code/workstation-playlist"
-
-full_name: Mark Bluemer
-git_user: mbluemer
-git_email: mark.bluemer@cimpress.com

@@ -1,0 +1,8 @@
+- name: Checkout dotfiles repo
+  git:
+    repo: git@github.com:mbluemer/dotfiles.git
+    dest: "{{ user_home }}/.dotfiles"
+    update: no
+
+- name: Run dotfiles install
+  command: "cd {{ user_home }}/.dotfiles && bash install"

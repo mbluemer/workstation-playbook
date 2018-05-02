@@ -4,6 +4,8 @@
 .LSOverride
 Icon
 
+# vim swap
+*.swp
 
 # Thumbnails
 ._*

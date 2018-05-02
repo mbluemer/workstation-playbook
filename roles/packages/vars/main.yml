@@ -1,0 +1,21 @@
+---
+installed_packages:
+  - tree
+  - curl
+  - neovim
+
+installed_applications:
+  # some browser goodness
+  - chromium
+  - firefox
+  # File and pass management
+  - keepassx
+  - dropbox
+  # Communication and Entertainment
+  - telegram
+  - spotify
+
+# some osx specific stuff
+installed_applications_osx:
+  - iterm
+

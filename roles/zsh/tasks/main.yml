@@ -1,6 +1,6 @@
 - name: install zsh shell
   package:
-    name: fish
+    name: zsh
     state: present
 
 - name: change default shell to zsh

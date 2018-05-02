@@ -1,0 +1,14 @@
+---
+- name: install packages
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ installed_packages }}"
+
+- name: install applications (homebrew)
+  homebrew_cask:
+    name: "{{ item }}"
+    state: present
+  with_items:
+    - "{{ installed_applications | union(installed_applications_osx) }}"
+  when: ansible_distribution == "MacOSX"

@@ -1,0 +1,9 @@
+---
+user: "{{ ansible_user_id }}"
+
+user_home: "{{ '~' | expanduser }}"
+dotfiles_home: "{{user_home}}/dotfiles"
+
+full_name: Mark Bluemer
+git_user: mbluemer
+git_email: mark.bluemer@cimpress.com
